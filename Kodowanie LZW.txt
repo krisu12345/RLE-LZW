@@ -1,0 +1,41 @@
+Kodowanie LZW (ang. Lempel-Ziv-Welch) to metoda bezstratnej kompresji danych, która polega na przetwarzaniu ciągu wejściowego i tworzeniu słownika składającego się z par symboli i ich kodów.
+
+Algorytm LZW działa w następujący sposób:
+
+Inicjuj słownik zawierający pojedyncze symbole jako pary (symbol, kod) o wartościach od 0 do 255.
+
+Przeczytaj pierwszy symbol ze źródłowego ciągu wejściowego.
+
+Dopóki są dostępne kolejne symbole wejściowe, powtarzaj kroki 4-6.
+
+Wyszukaj najdłuższy ciąg symboli z wejściowego ciągu, który znajduje się już w słowniku.
+
+Zapisz kod dla znalezionego ciągu symboli.
+
+Dodaj do słownika nową parę symboli i odpowiadającego jej kodu, reprezentującego ciąg symboli z wejściowego ciągu, który nie jest jeszcze w słowniku.
+
+Zwróć sekwencję kodów uzyskanych z przetworzenia całego ciągu wejściowego.
+
+Kodowanie LZW charakteryzuje się wysoką stopą kompresji dla wielu rodzajów danych, a także szybkością działania dzięki wykorzystaniu słownika. Wadą tego algorytmu jest to, że wymaga on zapisywania słownika w celu odtworzenia oryginalnego ciągu wejściowego, co może być kosztowne w przypadku dużych danych.
+
+Kodowanie LZW ma wiele zalet i wad, poniżej przedstawione są najważniejsze z nich.
+
+Zalety kodowania LZW:
+
+Wysoka stopa kompresji: Kodowanie LZW jest jednym z najskuteczniejszych algorytmów kompresji bezstratnej dla wielu rodzajów danych, zwłaszcza dla tekstów zawierających powtarzające się wzorce.
+
+Szybkość działania: Kodowanie LZW jest stosunkowo szybkim algorytmem, ponieważ wykorzystuje słownik do przechowywania już skompresowanych symboli.
+
+Łatwość implementacji: Algorytm LZW jest stosunkowo prosty w implementacji i jest stosowany w wielu popularnych narzędziach kompresujących.
+
+Możliwość adaptacji: Algorytm LZW może być stosowany do kompresji różnych typów danych, a słownik może być modyfikowany na bieżąco w celu dostosowania go do charakterystyki danego ciągu wejściowego.
+
+Wady kodowania LZW:
+
+Wymagane miejsce na przechowywanie słownika: Kodowanie LZW wymaga przechowywania słownika, co może być kosztowne w przypadku dużych danych.
+
+Czasami gorsza skuteczność: Kodowanie LZW nie zawsze jest najlepszą metodą kompresji dla wszystkich typów danych. W niektórych przypadkach, takich jak dane losowe, może nawet powodować zwiększenie rozmiaru pliku.
+
+Wrażliwość na błędy: W przypadku uszkodzenia lub utraty części danych w sekwencji skompresowanych symboli, odtworzenie oryginalnego ciągu może stać się niemożliwe.
+
+Słownik musi być znany przy dekompresji: Do dekompresji danych skompresowanych kodowaniem LZW wymagany jest dokładnie ten sam słownik, co do ich kompresji. To może stwarzać pewne wyzwania, szczególnie w przypadku przenoszenia skompresowanych danych między różnymi systemami i programami.

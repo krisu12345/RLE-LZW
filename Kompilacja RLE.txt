@@ -1,0 +1,39 @@
+Kompilacja RLE (ang. Run-Length Encoding) to metoda bezstratnej kompresji danych, która polega na zastąpieniu sekwencji powtarzających się symboli pojedynczym symbolem i liczbą ich powtórzeń.
+
+Algorytm kompilacji RLE działa w następujący sposób:
+
+Przeczytaj pierwszy symbol ze źródłowego ciągu wejściowego.
+
+Dopóki są dostępne kolejne symbole wejściowe, powtarzaj kroki 3-6.
+
+Przeczytaj następny symbol.
+
+Jeśli symbol jest taki sam jak poprzedni, zwiększ licznik powtórzeń.
+
+Jeśli symbol jest inny niż poprzedni, zapisz poprzedni symbol i jego liczbę powtórzeń, a następnie zresetuj licznik powtórzeń i zapisz aktualny symbol jako nowy symbol.
+
+Zwróć sekwencję skompresowanych symboli, każdy poprzedzony liczbą jego powtórzeń.
+
+Przykładowo, ciąg "AAABBBCCCC" można skompresować do "A3B3C4".
+
+Kompilacja RLE ma niski koszt obliczeniowy, ponieważ wymaga tylko prostych operacji zliczania i porównywania symboli. Wadą tej metody jest to, że może zwiększać rozmiar danych, które nie zawierają dużych powtarzających się sekwencji, ponieważ każdy symbol musi być poprzedzony liczbą powtórzeń.
+
+Zalety kompilacji RLE:
+
+Prosta implementacja: Algorytm RLE jest stosunkowo prosty do zaimplementowania, co oznacza, że można go łatwo stosować w różnych aplikacjach i systemach.
+
+Wysoka stopa kompresji: Kompresja RLE działa dobrze dla danych, które zawierają powtarzające się wzorce, co może prowadzić do wysokiej stopy kompresji.
+
+Szybkość działania: Kompresja RLE jest szybkim algorytmem, ponieważ wymaga tylko prostych operacji zliczania i porównywania symboli.
+
+Bezstratna kompresja: Kompresja RLE jest metodą bezstratną, co oznacza, że dane skompresowane przy użyciu tej metody mogą być odtworzone bez utraty informacji.
+
+Wady kompilacji RLE:
+
+Niski stopień kompresji dla niektórych typów danych: Kompresja RLE działa dobrze dla danych, które zawierają powtarzające się wzorce, ale może być mniej skuteczna dla danych, które nie posiadają takich wzorców.
+
+Zwiększenie rozmiaru danych: Kompresja RLE może prowadzić do zwiększenia rozmiaru danych, jeśli nie ma wystarczająco dużo powtarzających się sekwencji. W przypadku danych, które nie zawierają dużych powtarzających się sekwencji, każdy symbol musi być poprzedzony liczbą jego powtórzeń, co może prowadzić do zwiększenia rozmiaru danych.
+
+Wrażliwość na błędy: W przypadku uszkodzenia lub utraty części danych w sekwencji skompresowanych symboli, odtworzenie oryginalnego ciągu może stać się niemożliwe.
+
+Wymagane dodatkowe miejsce na przechowywanie liczby powtórzeń: Kompresja RLE wymaga przechowywania dodatkowych informacji w postaci liczby powtórzeń dla każdego symbolu. To może prowadzić do zwiększenia rozmiaru skompresowanych danych w porównaniu z oryginalnymi danymi w niektórych przypadkach.
